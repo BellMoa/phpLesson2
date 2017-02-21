@@ -9,20 +9,20 @@
 abstract class AbstractModel
 {
 
-    protected $table;
-    protected $className;
+    protected static $table;
+    protected static $className;
 
-    public function getAll()
+    public static function getAll()
     {
         $db = new DB();
-        $sql = 'SELECT * FROM'.static::$table;
+        $sql = ' SELECT * FROM '. static::$table;
         return $db->queryAll($sql,static::$className);
     }
 
-    public function getOne($id)
+    public static function getOne($id)
     {
         $db = new DB();
-        $sql ='SELECT * FROM'.static::$table.'WHERE id='.$id;
+        $sql =' SELECT * FROM ' . static::$table. ' WHERE id='.$id;
         return $db->queryOne($sql,static::$className);
     }
 }
