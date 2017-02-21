@@ -1,7 +1,6 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: genjo
- * Date: 2/21/17
- * Time: 9:46 AM
- */
+<?php foreach ($items as $item): ?>
+    <h1><?php echo $item->title?></h1>
+    <div><?php echo $item->text?>
+        <?php echo $item->date ?>
+    </div>
+<?php endforeach; ?>
