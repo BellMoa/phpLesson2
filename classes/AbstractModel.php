@@ -1,12 +1,7 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: genjo
- * Date: 2/21/17
- * Time: 9:58 AM
- */
-abstract class AbstractModel
+
+abstract class AbstractModel implements IModel
 {
 
     protected static $table;
